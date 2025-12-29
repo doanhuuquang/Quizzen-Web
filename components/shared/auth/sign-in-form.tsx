@@ -23,11 +23,7 @@ import {
 } from "@/components/ui/input-group";
 import useLogin from "@/hooks/auth-hooks/use-signin";
 import useReCaptcha from "@/hooks/auth-hooks/use-recaptcha";
-import dynamic from "next/dynamic";
-
-const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
-  ssr: false,
-});
+import ReCAPTCHA from "react-google-recaptcha";
 
 export function SignInForm() {
   const t = useTranslations("Label");
@@ -125,8 +121,8 @@ export function SignInForm() {
         {form.formState.isValid && (
           <div className="flex justify-center">
             <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY}
-              onChange={(token: string) => {
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY!}
+              onChange={(token: string | null) => {
                 setToken(token);
               }}
               onExpired={() => {
