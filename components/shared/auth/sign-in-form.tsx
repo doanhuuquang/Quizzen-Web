@@ -1,7 +1,5 @@
 "use client";
 
-import ReCAPTCHA from "react-google-recaptcha";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -25,6 +23,11 @@ import {
 } from "@/components/ui/input-group";
 import useLogin from "@/hooks/auth-hooks/use-signin";
 import useReCaptcha from "@/hooks/auth-hooks/use-recaptcha";
+import dynamic from "next/dynamic";
+
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
+  ssr: false,
+});
 
 export function SignInForm() {
   const t = useTranslations("Label");
