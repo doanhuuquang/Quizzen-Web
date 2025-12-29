@@ -105,7 +105,7 @@ export default function AuthFooter() {
           <Link
             key={link.href}
             href={link.href}
-            className="px-4 font-semibold hover:underline underline-offset-3"
+            className="px-3 font-semibold hover:underline underline-offset-3"
           >
             {link.title}
           </Link>

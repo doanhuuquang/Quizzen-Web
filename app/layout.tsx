@@ -23,14 +23,14 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
 
   return (
     <html lang={locale} suppressHydrationWarning>
