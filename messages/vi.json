@@ -1,0 +1,83 @@
+{
+  "Theme": {
+    "SelectTheme": "Chọn giao diện",
+    "Light": "Chế độ sáng",
+    "Dark": "Chế độ tối",
+    "System": "Giao diện hệ thống"
+  },
+
+  "Language": {
+    "SelectLanguage": "Chọn ngôn ngữ",
+    "Vietnamese": "Tiếng Việt",
+    "English": "Tiếng Anh"
+  },
+
+  "ErrorMessages": {
+    "LoginNotFoundAccount": "Không tìm thấy tài khoản. Bạn đã đăng ký chưa?",
+    "LoginIncorrectPassword": "Mật khẩu không đúng. Vui lòng thử lại!",
+    "PasswordsDoNotMatch": "Mật khẩu không khớp. Vui lòng nhập lại.",
+    "UserAlreadyExists": "Tài khoản đã tồn tại. Vui lòng đăng nhập.",
+    "RegistrationFailed": "Đăng ký thất bại. Vui lòng thử lại sau.",
+    "RefreshTokenError": "Không thể làm mới phiên đăng nhập. Vui lòng đăng nhập lại.",
+    "InternalServerError": "Lỗi hệ thống. Vui lòng thử lại sau."
+  },
+
+  "Label": {
+    "GreatToHaveYouback": "Rất vui được gặp lại bạn!",
+    "SignIn": "Đăng nhập",
+    "CreateAccount": "Tạo tài khoản",
+    "CreateAFreeAccount": "Tạo tài khoản miễn phí",
+    "ComeInGetCreative": "Tham gia ngay, thỏa sức sáng tạo và bắt đầu hành trình quiz của bạn!",
+
+    "ContinueWithGoogle": "Tiếp tục với Google",
+    "ContinueWithFacebook": "Tiếp tục với Facebook",
+    "ContinueWithApple": "Tiếp tục với Apple",
+    "ContinueWithEmail": "Tiếp tục với Email",
+
+    "FirstName": "Tên",
+    "LastName": "Họ",
+    "Email": "Email",
+    "UsernameOrEmail": "Tên người dùng hoặc Email",
+    "Password": "Mật khẩu",
+    "RemindMe": "Nhắc tôi",
+    "ForgotPassword": "Quên mật khẩu?",
+
+    "UsernameIsRequired": "Vui lòng nhập tên người dùng",
+    "FirstNameIsRequired": "Vui lòng nhập tên",
+    "LastNameIsRequired": "Vui lòng nhập họ",
+    "InvalidEmailAddress": "Địa chỉ email không hợp lệ",
+    "EmailIsRequired": "Email là bắt buộc",
+    "PasswordIsRequired": "Mật khẩu là bắt buộc",
+
+    "PasswordMinLength": "Mật khẩu phải có ít nhất 8 ký tự",
+    "PasswordLowercase": "Mật khẩu phải chứa ít nhất 1 chữ thường",
+    "PasswordUppercase": "Mật khẩu phải chứa ít nhất 1 chữ hoa",
+    "PasswordDigit": "Mật khẩu phải chứa ít nhất 1 chữ số",
+    "PasswordSpecialChar": "Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt",
+    "PasswordValid": "Sử dụng ít nhất 8 ký tự bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt. Không được chứa tên hoặc tên người dùng.",
+
+    "NewHere": "Bạn mới đến?",
+    "CreateAnQuizzenAccount": "Tạo tài khoản Quizzen",
+
+    "AlreadyHaveAnQuizzenAccount": "Đã có tài khoản Quizzen?",
+    "SignInHere": "Đăng nhập tại đây",
+
+    "BySigningIn": "Bằng cách tiếp tục, bạn xác nhận rằng bạn đủ 18 tuổi và đồng ý với",
+    "PrivacyPolicy": "Chính sách bảo mật",
+    "And": "và",
+    "TermsOfService": "Điều khoản dịch vụ"
+  },
+
+  "Footer": {
+    "AboutQuizzen": "Về Quizzen",
+    "Pricing&Plans": "Giá & Gói dịch vụ",
+    "LicenseTerms": "Điều khoản giấy phép",
+    "Term&Conditions": "Điều khoản & Điều kiện",
+    "PrivacyPolicy": "Chính sách bảo mật",
+    "Cookies": "Cookies",
+    "DoNotSellOrShareMyPersonalInformation": "Không bán hoặc chia sẻ thông tin cá nhân của tôi",
+    "HelpCenter": "Trung tâm trợ giúp",
+    "CookiesSettings": "Cài đặt Cookies",
+    "AllRightsReserved": "© 2025 Quizzen. Mọi quyền được bảo lưu. Các thương hiệu và nhãn hiệu thuộc quyền sở hữu của chủ sở hữu tương ứng."
+  }
+}

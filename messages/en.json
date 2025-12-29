@@ -1,0 +1,77 @@
+{
+  "Theme": {
+    "SelectTheme": "Select Theme",
+    "Light": "Light mode",
+    "Dark": "Dark mode",
+    "System": "System"
+  },
+  "Language": {
+    "SelectLanguage": "Select Language",
+    "Vietnamese": "Vietnamese",
+    "English": "English"
+  },
+  "ErrorMessages": {
+    "LoginNotFoundAccount": "Opps! Not found account. Did you register?",
+    "LoginIncorrectPassword": "Incorrect password. Please try again!",
+    "PasswordsDoNotMatch": "Passwords do not match. Please re-enter.",
+    "UserAlreadyExists": "User already exists. Please login instead.",
+    "RegistrationFailed": "Registration failed. Please try again later.",
+    "RefreshTokenError": "Failed to refresh token. Please login again.",
+    "InternalServerError": "Internal server error. Please try again later."
+  },
+  "Label": {
+    "GreatToHaveYouback": "Great to have you back!",
+    "SignIn": "Sign in",
+    "CreateAccount": "Create Account",
+    "CreateAFreeAccount": "Create a free account",
+    "ComeInGetCreative": "Come in, get creative, and start your quiz journey!",
+
+    "ContinueWithGoogle": "Continue with Google",
+    "ContinueWithFacebook": "Continue with Facebook",
+    "ContinueWithApple": "Continue with Apple",
+    "ContinueWithEmail": "Continue with Email",
+
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "Email": "Email",
+    "UsernameOrEmail": "Username or Email",
+    "Password": "Password",
+    "RemindMe": "Remind me",
+    "ForgotPassword": "Forgot password?",
+    "UsernameIsRequired": "Username is required",
+    "FirstNameIsRequired": "First name is required",
+    "LastNameIsRequired": "Last name is required",
+    "InvalidEmailAddress": "Invalid email address",
+    "EmailIsRequired": "Email is required",
+    "PasswordIsRequired": "Password is required",
+    "PasswordMinLength": "Password must be at least 8 characters long",
+    "PasswordLowercase": "Password must contain at least one lowercase letter",
+    "PasswordUppercase": "Password must contain at least one uppercase letter",
+    "PasswordDigit": "Password must contain at least one number",
+    "PasswordSpecialChar": "Password must contain at least one special character",
+    "PasswordValid": "Use 8 or more characters with a mix of letters, upper case, lower case, numbers and symbols. Must not contain your name or username.",
+
+    "NewHere": "New here?",
+    "CreateAnQuizzenAccount": "Create an Quizzen account",
+
+    "AlreadyHaveAnQuizzenAccount": "Already have an Quizzen Account?",
+    "SignInHere": "Sign in here",
+
+    "BySigningIn": "By continuing, you confirm you are 18 or over and agree to our",
+    "PrivacyPolicy": "Privacy Policy",
+    "And": "And",
+    "TermsOfService": "Terms of Service"
+  },
+  "Footer": {
+    "AboutQuizzen": "About Quizzen",
+    "Pricing&Plans": "Pricing & Plans",
+    "LicenseTerms": "License Terms",
+    "Term&Conditions": "Terms & Conditions",
+    "PrivacyPolicy": "Privacy Policy",
+    "Cookies": "Cookies",
+    "DoNotSellOrShareMyPersonalInformation": "Do Not Sell or Share My Personal Information",
+    "HelpCenter": "Help Center",
+    "CookiesSettings": "Cookies Settings",
+    "AllRightsReserved": "© 2025 Quizzen. All rights reserved. Trademarks and brand names are the property of their respective owners."
+  }
+}
