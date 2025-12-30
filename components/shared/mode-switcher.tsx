@@ -10,8 +10,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useTranslations } from "next-intl";
-import { useMounted } from "@/hooks/use-mouted";
-import { Laptop, Moon, Palette, Sun } from "lucide-react";
+import { Laptop, Moon, Sun } from "lucide-react";
+import { useMounted } from "@/hooks/use-mounted";
 
 export function ModeSwitcher() {
   const mounted = useMounted();

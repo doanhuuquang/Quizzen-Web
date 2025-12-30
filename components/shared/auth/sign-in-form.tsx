@@ -118,20 +118,21 @@ export function SignInForm() {
           )}
         />
 
-        {form.formState.isValid && (
-          <div className="flex justify-center">
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY!}
-              onChange={(token: string | null) => {
-                setToken(token);
-              }}
-              onExpired={() => {
-                setToken(null);
-                setIsVerified(false);
-              }}
-            />
-          </div>
-        )}
+        {form.formState.isValid &&
+          process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY && (
+            <div className="flex justify-center">
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY}
+                onChange={(token: string | null) => {
+                  setToken(token);
+                }}
+                onExpired={() => {
+                  setToken(null);
+                  setIsVerified(false);
+                }}
+              />
+            </div>
+          )}
 
         <p className="text-destructive text-sm">{signInError}</p>
 
