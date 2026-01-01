@@ -64,7 +64,7 @@ export function SignInForm() {
                 <FormLabel className="data-[error=true]:text-foreground font-bold">
                   {t("UsernameOrEmail")}
                 </FormLabel>
-                <FormLabel className="data-[error=true]:text-foreground font-bold">
+                <FormLabel className="data-[error=true]:text-foreground font-semibold">
                   <Link href={""} className="underline">
                     {t("RemindMe")}
                   </Link>
@@ -96,7 +96,7 @@ export function SignInForm() {
                 <FormLabel className="data-[error=true]:text-foreground font-bold">
                   {t("Password")}
                 </FormLabel>
-                <FormLabel className="data-[error=true]:text-foreground font-bold">
+                <FormLabel className="data-[error=true]:text-foreground font-semibold">
                   <Link href={""} className="underline">
                     {t("ForgotPassword")}
                   </Link>

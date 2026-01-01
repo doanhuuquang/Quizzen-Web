@@ -1,10 +1,8 @@
 import { SignInForm } from "@/components/shared/auth/sign-in-form";
-import { Button } from "@/components/ui/button";
+import SignInOptions from "@/components/shared/auth/sign-in-options";
 import { Separator } from "@/components/ui/separator";
-import { APP_IMAGES } from "@/lib/constants/app-images";
 import { APP_PATHS } from "@/lib/constants/app-paths";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
@@ -25,55 +23,8 @@ export default function Page() {
         <div className="w-full max-w-lg bg-container md:px-10 py-10 px-4 space-y-8 md:rounded-sm bg-background md:border border-foreground">
           <p className="text-center text-3xl font-black">{t("SignIn")}</p>
 
-          {/* Sign In options */}
-          <div className="w-full space-y-4">
-            <Button
-              variant={"outline"}
-              className="w-full border-foreground dark:hover:bg-foreground hover:bg-foreground hover:text-background"
-            >
-              <Image
-                src={APP_IMAGES.ICON_GOOGLE}
-                alt="Google icon"
-                width={30}
-                height={30}
-              />
-              {t("ContinueWithGoogle")}
-            </Button>
-            <Button
-              variant={"outline"}
-              className="w-full border-foreground hover:bg-foreground dark:hover:bg-foreground hover:text-background group"
-            >
-              <Image
-                src={APP_IMAGES.ICON_APPLE}
-                alt="Apple icon"
-                width={28}
-                height={28}
-                className="block dark:hidden group-hover:hidden  group-hover:dark:block"
-              />
-              <Image
-                src={APP_IMAGES.ICON_APPLE_WHITE}
-                alt="Apple icon"
-                width={28}
-                height={28}
-                className="hidden dark:block group-hover:block group-hover:dark:hidden"
-              />
-              {t("ContinueWithApple")}
-            </Button>
-            <Button
-              variant={"outline"}
-              className="w-full border-foreground hover:bg-foreground dark:hover:bg-foreground hover:text-background"
-            >
-              <Image
-                src={APP_IMAGES.ICON_FACEBOOK}
-                alt="Facebook icon"
-                width={30}
-                height={30}
-              />
-              {t("ContinueWithFacebook")}
-            </Button>
-          </div>
+          <SignInOptions />
 
-          {/* Login form */}
           <SignInForm />
 
           {/* Dont have account */}

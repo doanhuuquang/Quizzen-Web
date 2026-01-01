@@ -1,14 +1,13 @@
 "use client";
 
+import SignInOptions from "@/components/shared/auth/sign-in-options";
 import { SignUpForm } from "@/components/shared/auth/sign-up-form";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { APP_IMAGES } from "@/lib/constants/app-images";
 import { APP_PATHS } from "@/lib/constants/app-paths";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -74,52 +73,7 @@ export default function Page() {
                   : "opacity-100 translate-x-0"
               )}
             >
-              <Button
-                variant={"outline"}
-                className="w-full border-foreground dark:hover:bg-foreground hover:bg-foreground hover:text-background"
-              >
-                <Image
-                  src={APP_IMAGES.ICON_GOOGLE}
-                  alt="Google icon"
-                  width={30}
-                  height={30}
-                />
-                {t("ContinueWithGoogle")}
-              </Button>
-
-              <Button
-                variant={"outline"}
-                className="w-full border-foreground hover:bg-foreground dark:hover:bg-foreground hover:text-background group"
-              >
-                <Image
-                  src={APP_IMAGES.ICON_APPLE}
-                  alt="Apple icon"
-                  width={28}
-                  height={28}
-                  className="block dark:hidden group-hover:hidden  group-hover:dark:block"
-                />
-                <Image
-                  src={APP_IMAGES.ICON_APPLE_WHITE}
-                  alt="Apple icon"
-                  width={28}
-                  height={28}
-                  className="hidden dark:block group-hover:block group-hover:dark:hidden"
-                />
-                {t("ContinueWithApple")}
-              </Button>
-
-              <Button
-                variant={"outline"}
-                className="w-full border-foreground hover:bg-foreground dark:hover:bg-foreground hover:text-background"
-              >
-                <Image
-                  src={APP_IMAGES.ICON_FACEBOOK}
-                  alt="Facebook icon"
-                  width={30}
-                  height={30}
-                />
-                {t("ContinueWithFacebook")}
-              </Button>
+              <SignInOptions />
 
               <Button
                 variant={"outline"}
@@ -145,9 +99,9 @@ export default function Page() {
                 onClick={() => setIsSelectedSignUpWithEmail(false)}
                 size={"icon"}
                 variant={"outline"}
-                className="rounded-full p-5"
+                className="rounded-full p-3"
               >
-                <ChevronLeft className="size-6" />
+                <ChevronLeft className="size-5" />
               </Button>
 
               <SignUpForm />

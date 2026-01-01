@@ -18,6 +18,16 @@ const signInWithEmailAndPassword = async (
   }
 };
 
+const signInGoogle = () => {
+  window.location.href =
+    "https://localhost:7092/api/account/login/google?returnUrl=http://localhost:3000";
+};
+
+const signInFacebook = () => {
+  window.location.href =
+    "https://localhost:7092/api/account/login/facebook?returnUrl=http://localhost:3000";
+};
+
 const signUpWithEmail = async (
   data: RegisterRequestSchema
 ): Promise<ApiSuccessResponseSchema> => {
@@ -30,4 +40,9 @@ const signUpWithEmail = async (
   }
 };
 
-export { signInWithEmailAndPassword, signUpWithEmail };
+export {
+  signInWithEmailAndPassword,
+  signUpWithEmail,
+  signInGoogle,
+  signInFacebook,
+};

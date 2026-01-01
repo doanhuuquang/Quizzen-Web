@@ -1,6 +1,10 @@
 import ApiErrorResponseSchema from "@/lib/schemas/api-response-schemas/api-error-response-schema";
 import LoginRequestSchema from "@/lib/schemas/auth-schemas/login-request-schema";
-import { signInWithEmailAndPassword } from "@/services/auth-services";
+import {
+  signInFacebook,
+  signInGoogle,
+  signInWithEmailAndPassword,
+} from "@/services/auth-services";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -24,5 +28,19 @@ export default function useSignIn() {
     }
   };
 
-  return { isSigningIn, signInError, signIn };
+  const signInWithGoogle = () => {
+    signInGoogle();
+  };
+
+  const signInWithFacebook = () => {
+    signInFacebook();
+  };
+
+  return {
+    isSigningIn,
+    signInError,
+    signIn,
+    signInWithGoogle,
+    signInWithFacebook,
+  };
 }
