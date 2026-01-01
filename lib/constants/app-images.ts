@@ -10,5 +10,6 @@ export const APP_IMAGES = {
   ICON_GOOGLE: "/icons/google.svg",
   ICON_APPLE: "/icons/apple.svg",
   ICON_APPLE_WHITE: "/icons/apple-white.svg",
+  ICON_MICROSOFT: "/icons/microsoft.svg",
   ICON_FACEBOOK: "/icons/facebook.svg",
 };
