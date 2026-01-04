@@ -24,18 +24,21 @@ import {
 import useLogin from "@/hooks/auth-hooks/use-signin";
 import useReCaptcha from "@/hooks/auth-hooks/use-recaptcha";
 import ReCAPTCHA from "react-google-recaptcha";
+import { APP_PATHS } from "@/lib/constants/app-paths";
 
 export function SignInForm() {
-  const t = useTranslations("Label");
+  const t = useTranslations("Pages.Auth.SignIn.Form");
+  const tv = useTranslations("Validations");
+
   const { isSigningIn, signInError, signIn } = useLogin();
   const { setToken, isVerified, setIsVerified } = useReCaptcha();
 
   const formSchema = z.object({
     emailOrUsername: z.string().min(1, {
-      message: t("UsernameIsRequired"),
+      message: tv("UsernameIsRequired"),
     }),
     password: z.string().min(1, {
-      message: t("PasswordIsRequired"),
+      message: tv("PasswordIsRequired"),
     }),
   });
 
@@ -65,7 +68,7 @@ export function SignInForm() {
                   {t("UsernameOrEmail")}
                 </FormLabel>
                 <FormLabel className="data-[error=true]:text-foreground font-semibold">
-                  <Link href={""} className="underline">
+                  <Link href={APP_PATHS.RECOVER_USERNAME} className="underline">
                     {t("RemindMe")}
                   </Link>
                 </FormLabel>
@@ -97,7 +100,7 @@ export function SignInForm() {
                   {t("Password")}
                 </FormLabel>
                 <FormLabel className="data-[error=true]:text-foreground font-semibold">
-                  <Link href={""} className="underline">
+                  <Link href={APP_PATHS.RESET_PASSWORD} className="underline">
                     {t("ForgotPassword")}
                   </Link>
                 </FormLabel>

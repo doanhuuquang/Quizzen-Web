@@ -16,7 +16,7 @@ export default function LocaleSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const t = useTranslations("Language");
+  const t = useTranslations("Languages");
 
   const switchLocale = (newLocale: string) => {
     if (newLocale !== locale) {

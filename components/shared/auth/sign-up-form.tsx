@@ -25,28 +25,29 @@ import useSignUP from "@/hooks/auth-hooks/use-signup";
 import { useEffect } from "react";
 
 export function SignUpForm() {
-  const t = useTranslations("Label");
+  const t = useTranslations("Pages.Auth.SignUp.Form");
+  const tv = useTranslations("Validations");
   const { isSigningUp, signUpError, isSignUpSuccess, signUp } = useSignUP();
 
   const formSchema = z.object({
     firstName: z.string().min(1, {
-      message: t("FirstNameIsRequired"),
+      message: tv("FirstNameIsRequired"),
     }),
     lastName: z.string().min(1, {
-      message: t("LastNameIsRequired"),
+      message: tv("LastNameIsRequired"),
     }),
-    email: z.email(t("InvalidEmailAddress")).min(1, {
-      message: t("EmailIsRequired"),
+    email: z.email(tv("InvalidEmailAddress")).min(1, {
+      message: tv("EmailIsRequired"),
     }),
     password: z
       .string()
       .min(8, {
-        message: t("PasswordMinLength"),
+        message: tv("PasswordMinLength"),
       })
-      .regex(/[a-z]/, { message: t("PasswordLowercase") })
-      .regex(/[A-Z]/, { message: t("PasswordUppercase") })
-      .regex(/[0-9]/, { message: t("PasswordDigit") })
-      .regex(/[^a-zA-Z0-9]/, t("PasswordSpecialChar")),
+      .regex(/[a-z]/, { message: tv("PasswordLowercase") })
+      .regex(/[A-Z]/, { message: tv("PasswordUppercase") })
+      .regex(/[0-9]/, { message: tv("PasswordDigit") })
+      .regex(/[^a-zA-Z0-9]/, tv("PasswordSpecialChar")),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -175,7 +176,7 @@ export function SignUpForm() {
                 </InputGroup>
               </FormControl>
               <FormMessage />
-              <FormDescription>{t("PasswordValid")}</FormDescription>
+              <FormDescription>{t("PasswordValidGuide")}</FormDescription>
             </FormItem>
           )}
         />

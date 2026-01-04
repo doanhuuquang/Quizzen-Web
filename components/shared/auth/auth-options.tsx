@@ -1,17 +1,24 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { APP_IMAGES } from "@/lib/constants/app-images";
 import {
   continueWithFacebook,
   continueWithGoogle,
   continueWithMicrosoft,
-} from "@/services/auth-services";
+} from "@/services/account-services";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faGoogle,
+  faWindows,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function SignInOptions() {
-  const t = useTranslations("Label");
+library.add(faGoogle, faWindows, faFacebook);
+
+export default function AuthOptions() {
+  const t = useTranslations("Pages.Auth.Options");
 
   return (
     <div className="w-full space-y-4">
@@ -20,12 +27,7 @@ export default function SignInOptions() {
         variant={"outline"}
         className="w-full border-foreground dark:hover:bg-foreground hover:bg-foreground hover:text-background"
       >
-        <Image
-          src={APP_IMAGES.ICON_GOOGLE}
-          alt="Google icon"
-          width={24}
-          height={24}
-        />
+        <FontAwesomeIcon icon={["fab", "google"]} size={"xl"} />
         {t("ContinueWithGoogle")}
       </Button>
 
@@ -34,12 +36,7 @@ export default function SignInOptions() {
         variant={"outline"}
         className="w-full border-foreground hover:bg-foreground dark:hover:bg-foreground hover:text-background"
       >
-        <Image
-          src={APP_IMAGES.ICON_FACEBOOK}
-          alt="Facebook icon"
-          width={24}
-          height={24}
-        />
+        <FontAwesomeIcon icon={["fab", "facebook"]} size={"xl"} />
         {t("ContinueWithFacebook")}
       </Button>
 
@@ -48,12 +45,7 @@ export default function SignInOptions() {
         variant={"outline"}
         className="w-full border-foreground hover:bg-foreground dark:hover:bg-foreground hover:text-background group"
       >
-        <Image
-          src={APP_IMAGES.ICON_MICROSOFT}
-          alt="Apple icon"
-          width={24}
-          height={24}
-        />
+        <FontAwesomeIcon icon={["fab", "windows"]} size={"xl"} />
         {t("ContinueWithMicrosoft")}
       </Button>
     </div>

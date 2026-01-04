@@ -1,11 +1,11 @@
 import ApiErrorResponseSchema from "@/lib/schemas/api-response-schemas/api-error-response-schema";
 import LoginRequestSchema from "@/lib/schemas/auth-schemas/login-request-schema";
-import { signInWithEmailAndPassword } from "@/services/auth-services";
+import { signInWithEmailAndPassword } from "@/services/account-services";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function useSignIn() {
-  const t = useTranslations("ErrorMessages");
+  const t = useTranslations("Errors");
 
   const [isSigningIn, setIsSigningIn] = useState<boolean>(false);
   const [signInError, setSignInError] = useState<string | null>(null);

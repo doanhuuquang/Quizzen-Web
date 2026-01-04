@@ -1,47 +1,34 @@
 {
-  "Theme": {
-    "SelectTheme": "Select Theme",
-    "Light": "Light mode",
-    "Dark": "Dark mode",
-    "System": "System"
-  },
-  "Language": {
-    "SelectLanguage": "Select Language",
-    "Vietnamese": "Vietnamese",
-    "English": "English"
-  },
-  "ErrorMessages": {
-    "LoginNotFoundAccount": "Opps! Not found account. Did you register?",
+  "Errors": {
+    "LoginNotFoundAccount": "Oops! Account not found. Have you registered?",
     "LoginIncorrectPassword": "Incorrect password. Please try again!",
     "PasswordsDoNotMatch": "Passwords do not match. Please re-enter.",
     "UserAlreadyExists": "User already exists. Please login instead.",
     "RegistrationFailed": "Registration failed. Please try again later.",
     "RefreshTokenError": "Failed to refresh token. Please login again.",
+    "UserNotExists": "User does not exist.",
     "InternalServerError": "Internal server error. Please try again later."
   },
-  "Label": {
-    "GreatToHaveYouback": "Great to have you back!",
-    "SignIn": "Sign in",
-    "CreateAccount": "Create Account",
-    "CreateAFreeAccount": "Create a free account",
-    "ComeInGetCreative": "Come in, get creative, and start your quiz journey!",
 
-    "ContinueWithGoogle": "Continue with Google",
-    "ContinueWithFacebook": "Continue with Facebook",
-    "ContinueWithMicrosoft": "Continue with Microsoft",
-    "ContinueWithEmail": "Continue with Email",
+  "Themes": {
+    "SelectTheme": "Select Theme",
+    "Light": "Light mode",
+    "Dark": "Dark mode",
+    "System": "System"
+  },
 
-    "FirstName": "First Name",
-    "LastName": "Last Name",
-    "Email": "Email",
-    "UsernameOrEmail": "Username or Email",
-    "Password": "Password",
-    "RemindMe": "Remind me",
-    "ForgotPassword": "Forgot password?",
+  "Languages": {
+    "SelectLanguage": "Select Language",
+    "Vietnamese": "Vietnamese",
+    "English": "English"
+  },
+
+  "Validations": {
     "UsernameIsRequired": "Username is required",
     "FirstNameIsRequired": "First name is required",
     "LastNameIsRequired": "Last name is required",
     "InvalidEmailAddress": "Invalid email address",
+    "EmailIsNotValid": "Email is not valid",
     "EmailIsRequired": "Email is required",
     "PasswordIsRequired": "Password is required",
     "PasswordMinLength": "Password must be at least 8 characters long",
@@ -49,29 +36,95 @@
     "PasswordUppercase": "Password must contain at least one uppercase letter",
     "PasswordDigit": "Password must contain at least one number",
     "PasswordSpecialChar": "Password must contain at least one special character",
-    "PasswordValid": "Use 8 or more characters with a mix of letters, upper case, lower case, numbers and symbols. Must not contain your name or username.",
-
-    "NewHere": "New here?",
-    "CreateAnQuizzenAccount": "Create an Quizzen account",
-
-    "AlreadyHaveAnQuizzenAccount": "Already have an Quizzen Account?",
-    "SignInHere": "Sign in here",
-
-    "BySigningIn": "By continuing, you confirm you are 18 or over and agree to our",
-    "PrivacyPolicy": "Privacy Policy",
-    "And": "And",
-    "TermsOfService": "Terms of Service"
+    "OTPIsRequired": "OTP is required"
   },
-  "Footer": {
-    "AboutQuizzen": "About Quizzen",
-    "Pricing&Plans": "Pricing & Plans",
-    "LicenseTerms": "License Terms",
-    "Term&Conditions": "Terms & Conditions",
-    "PrivacyPolicy": "Privacy Policy",
-    "Cookies": "Cookies",
-    "DoNotSellOrShareMyPersonalInformation": "Do Not Sell or Share My Personal Information",
-    "HelpCenter": "Help Center",
-    "CookiesSettings": "Cookies Settings",
-    "AllRightsReserved": "© 2025 Quizzen. All rights reserved. Trademarks and brand names are the property of their respective owners."
+
+  "Pages": {
+    "Auth": {
+      "Header": {
+        "SignIn": "Sign In"
+      },
+      "Footer": {
+        "AboutQuizzen": "About Quizzen",
+        "Pricing&Plans": "Pricing & Plans",
+        "LicenseTerms": "License Terms",
+        "Term&Conditions": "Terms & Conditions",
+        "PrivacyPolicy": "Privacy Policy",
+        "Cookies": "Cookies",
+        "DoNotSellOrShareMyPersonalInformation": "Do Not Sell or Share My Personal Information",
+        "HelpCenter": "Help Center",
+        "CookiesSettings": "Cookies Settings",
+        "AllRightsReserved": "© 2025 Quizzen. All rights reserved. Trademarks and brand names are the property of their respective owners."
+      },
+      "Options": {
+        "ContinueWithGoogle": "Continue with Google",
+        "ContinueWithFacebook": "Continue with Facebook",
+        "ContinueWithMicrosoft": "Continue with Microsoft"
+      },
+      "SignIn": {
+        "GreatToHaveYouback": "Great to have you back!",
+        "SignIn": "Sign in",
+        "CreateAccount": "Create Account",
+        "CreateAFreeAccount": "Create a free account",
+        "ComeInGetCreative": "Come in, get creative, and start your quiz journey!",
+        "NewHere": "New here?",
+        "CreateAnQuizzenAccount": "Create an Quizzen account",
+        "ByContinuing": "By continuing, you confirm you are 18 or over and agree to our",
+        "PrivacyPolicy": "Privacy Policy",
+        "And": "And",
+        "TermsOfService": "Terms of Service",
+        "Form": {
+          "UsernameOrEmail": "Username or Email",
+          "Password": "Password",
+          "RemindMe": "Remind me",
+          "ForgotPassword": "Forgot password",
+          "SignIn": "Sign in"
+        }
+      },
+      "SignUp": {
+        "CreateAFreeAccount": "Create a free account",
+        "ComeInGetCreative": "Come in, get creative, and start your quiz journey!",
+        "AlreadyHaveAnQuizzenAccount": "Already have an Quizzen Account?",
+        "ContinueWithEmail": "Continue with Email",
+        "SignInHere": "Sign in here",
+        "ByContinuing": "By continuing, you confirm you are 18 or over and agree to our",
+        "PrivacyPolicy": "Privacy Policy",
+        "And": "And",
+        "TermsOfService": "Terms of Service",
+        "Form": {
+          "FirstName": "First Name",
+          "LastName": "Last Name",
+          "Email": "Email",
+          "Password": "Password",
+          "CreateAccount": "Create Account",
+          "PasswordValidGuide": "Use 8 or more characters with a mix of letters, upper case, lower case, numbers and symbols. Must not contain your name or username."
+        }
+      },
+      "RecoverUsername": {
+        "ForgotUsernames": "Forgot username?",
+        "EnterYourEmail": "Enter your email and we'll send you your username.",
+        "Form": {
+          "Email": "Email",
+          "SendUsername": "Send Username",
+          "RecoverUsernameSent": "If the email address entered was associated with any Quizzen accounts we have sent you an email with the usernames."
+        }
+      },
+      "ResetPassword": {
+        "ForgotPassword": "Forgot password?",
+        "EnterYourDetails": "Enter your details below to request an Envato account password reset.",
+        "Form": {
+          "Email": "Email",
+          "SendOTP": "Send OTP",
+          "OTP": "OTP Code",
+          "CheckOTP": "Check OTP",
+          "Back": "Back",
+          "AnOTPHasBeenSent": "An OTP has been sent to your email",
+          "DidntReceiveTheCode": "Didn’t receive the code?",
+          "ResendOTP": "Resend OTP",
+          "NewPassword": "New Password",
+          "ResetPassword": "Reset Password"
+        }
+      }
+    }
   }
 }

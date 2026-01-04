@@ -1,6 +1,6 @@
 "use client";
 
-import SignInOptions from "@/components/shared/auth/sign-in-options";
+import AuthOptions from "@/components/shared/auth/auth-options";
 import { SignUpForm } from "@/components/shared/auth/sign-up-form";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -10,9 +10,14 @@ import { ChevronLeft, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+library.add(faEnvelope);
 
 export default function Page() {
-  const t = useTranslations("Label");
+  const t = useTranslations("Pages.Auth.SignUp");
 
   const autoHeightDivRef = useRef<HTMLDivElement>(null);
   const signUpOptionsRef = useRef<HTMLDivElement>(null);
@@ -31,10 +36,10 @@ export default function Page() {
 
     const upDateHeight = () => {
       if (isSelectedSignUpWithEmail) {
-        autoHeightDivRef.current!.style.height =
+        autoHeightDivRef.current!.style.minHeight =
           signUpFormRef.current!.offsetHeight + "px";
       } else {
-        autoHeightDivRef.current!.style.height =
+        autoHeightDivRef.current!.style.minHeight =
           signUpOptionsRef.current!.offsetHeight + "px";
       }
     };
@@ -73,14 +78,14 @@ export default function Page() {
                   : "opacity-100 translate-x-0"
               )}
             >
-              <SignInOptions />
+              <AuthOptions />
 
               <Button
                 variant={"outline"}
                 onClick={() => setIsSelectedSignUpWithEmail(true)}
                 className="w-full border-foreground hover:bg-foreground dark:hover:bg-foreground hover:text-background"
               >
-                <Mail className="size-6 mr-1" />
+                <FontAwesomeIcon icon={["fas", "envelope"]} size={"xl"} />
                 {t("ContinueWithEmail")}
               </Button>
             </div>
@@ -99,9 +104,9 @@ export default function Page() {
                 onClick={() => setIsSelectedSignUpWithEmail(false)}
                 size={"icon"}
                 variant={"outline"}
-                className="rounded-full p-3"
+                className="rounded-full p-6"
               >
-                <ChevronLeft className="size-5" />
+                <ChevronLeft className="size-6" />
               </Button>
 
               <SignUpForm />
@@ -110,7 +115,7 @@ export default function Page() {
 
           {/* Already have account */}
           <div className="text-center space-x-1">
-            <span className="">{t("AlreadyHaveAnQuizzenAccount")}</span>
+            <span>{t("AlreadyHaveAnQuizzenAccount")}</span>
             <Link href={APP_PATHS.SIGN_IN}>
               <span className="font-semibold underline">{t("SignInHere")}</span>
             </Link>
@@ -120,7 +125,7 @@ export default function Page() {
 
           {/* Terms */}
           <div className="text-sm space-x-1">
-            <span>{t("BySigningIn")}</span>
+            <span>{t("ByContinuing")}</span>
             <span className="underline">
               <Link href={""}>{t("PrivacyPolicy")}</Link>
             </span>

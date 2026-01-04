@@ -25,7 +25,7 @@ library.add(
 );
 
 export default function AuthFooter() {
-  const t = useTranslations("Footer");
+  const t = useTranslations("Pages.Auth.Footer");
 
   const footerNavLinks = [
     {

@@ -15,7 +15,7 @@ import { useMounted } from "@/hooks/use-mounted";
 
 export function ModeSwitcher() {
   const mounted = useMounted();
-  const t = useTranslations("Theme");
+  const t = useTranslations("Themes");
   const { theme, setTheme } = useTheme();
 
   const themes = [
